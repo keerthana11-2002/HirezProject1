@@ -8,7 +8,7 @@ import SavedJob from "./components/pages/saved-jobs";
 import { ThemeProvider } from "@/components/theme-provider";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LandingPage from "./components/pages/landingpage";
-import AppLayout from "@/components/layouts/AppLayout";
+import AppLayout from "@/components/layouts/Applayout";
 
 const router = createBrowserRouter([
   {
