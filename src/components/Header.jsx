@@ -8,8 +8,6 @@ import {
   useUser,
 } from "@clerk/clerk-react";
 import { Button } from "./ui/button";
-import logo2 from "../assets/logo2.png";
-
 import { Heart, PenBox } from "lucide-react";
 
 const Header = () => {
@@ -37,7 +35,7 @@ const Header = () => {
         <nav className="py-4 flex justify-between items-center md:ml-20">
           <Link to="/">
             <img
-              src={logo2}
+              src="/assets/logo2.png"
               className="h-16 md:h-32 md:-ml-20 sm:h-24  "
               alt="Hirez Logo"
             />

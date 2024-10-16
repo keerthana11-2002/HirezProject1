@@ -6,8 +6,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import companies from "@/data/companies";
-import logo2 from "@/assets/logo2.png";
-import banner from "@/assets/banner.png";
 import faqs from "@/data/faqs";
 import {
   Accordion,
@@ -30,7 +28,7 @@ const LandingPage = () => {
           <span className="flex items-center gap-2  xl:text-7xl sm:gap-4 md:gap-5 lg:gap-6 ">
             with
             <img
-              src={logo2}
+              src="/assets/logo2.png"
               className="h-12  sm:h-14 md:h-20 lg:h-28 xl:h-24"
               alt="Hirez Logo"
             />
@@ -87,7 +85,7 @@ const LandingPage = () => {
       </Carousel>
 
       <img
-        src={banner}
+        src="/assets/banner.png"
         className="w-full h-auto object-cover rounded-md"
         alt="Banner"
       />
