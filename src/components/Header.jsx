@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="xl:ml-24">
+      <div className="">
         <nav className="py-4 flex justify-between items-center md:ml-20">
           <Link to="/">
             <img
@@ -41,7 +41,7 @@ const Header = () => {
             />
           </Link>
 
-          <div className="flex gap-8 mr-5 xl:-mr-28   ">
+          <div className="flex gap-8 mr-5 md:-mt-3 xl:mr-36 xl:-mt-10">
             <SignedOut>
               <Button
                 className="xl:text-2xl"
