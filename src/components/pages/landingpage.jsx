@@ -14,7 +14,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
-import Autoplay from "embla-carousel-autoplay";
+ 
 
 const LandingPage = () => {
   return (
@@ -60,24 +60,17 @@ const LandingPage = () => {
         </Link>
       </div>
 
-      <Carousel
-        plugins={[
-          Autoplay({
-            delay: 2000,
-          }),
-        ]}
-        className="w-full py-6 sm:py-8 md:py-10"
-      >
+      <Carousel>
         <CarouselContent className="flex gap-2 sm:gap-4 md:gap-8 lg:gap-12 items-center z-0 ">
           {companies.map(({ name, id, path }) => (
             <CarouselItem
               key={id}
-              className="flex-shrink-0 w-1/3 sm:w-1/4 md:w-1/6 lg:w-1/8"
+              className="hidden "
             >
               <img
                 src={path}
                 alt={name}
-                className="h-10 sm:h-10 md:h-12 lg:h-16 xl:h-20 object-contain mx-auto"
+                className="   sm:h-10 md:h-12 lg:h-16 xl:h-20 object-contain mx-auto"
               />
             </CarouselItem>
           ))}

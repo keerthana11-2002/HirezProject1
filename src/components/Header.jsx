@@ -41,7 +41,7 @@ const Header = () => {
             />
           </Link>
 
-          <div className="flex gap-8 mr-5 md:-mt-3 xl:mr-36 xl:-mt-10">
+          <div className="flex gap-8 mr-5 md:-mt-3 xl:mr-36 xl:-mt-10 ">
             <SignedOut>
               <Button
                 className="xl:text-2xl"
