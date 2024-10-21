@@ -56,7 +56,7 @@ const JobCard = ({
           <img
             src={job.company.logo_url}
             alt="Company Logo"
-            className="w-20 h-20  md:h-10 md:w-20 object-cover rounded-md"
+            className="w-auto h-6 xl:w-auto   md:h-6 md:w-auto object-cover rounded-md"
           />
         )}
         <div className="flex items-center md:text-2xl  md:-ml-44 ">

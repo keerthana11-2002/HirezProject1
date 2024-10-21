@@ -65,32 +65,32 @@ const JobListing = () => {
   }
 
   return (
-    <div className="lg:ml-96 ">
-      <h1 className=" gradient-title font-extrabold text-4xl sm:text-7xl text-center pb-4  lg:mb-4">
+    <div className="xl:p-20" >
+      <h1 className=" gradient-title font-extrabold text-3xl sm:text-6xl text-center pb-4  lg:mb-4 xl:-mt-20">
         Latest Jobs
       </h1>
       <form
         onSubmit={handleSearch}
-        className="h-14  p-2 flex flex-row w-full gap-2 items-center mb-3"
+        className="h-14  p-2 flex flex-row w-full gap-2 items-center  "
       >
         <Input
           type="text"
           placeholder="Search Jobs by Title.."
           name="search-query"
-          className="h-full flex-1  px-4 text-md lg:text-xl lg:mb-10"
+          className="h-full flex-1  px-4 text-md lg:text-xl  "
         />
         <Button
           type="submit"
-          className="h-full sm:w-28 lg:-mt-10 lg:text-2xl"
+          className="h-full sm:w-28  lg:text-2xl"
           variant="blue"
         >
           Search
         </Button>
       </form>
 
-      <div className="flex flex-col sm:flex-row gap-2 p-4">
+      <div className="flex flex-col sm:flex-row gap-4 p-4">
         <Select value={location} onValueChange={(value) => setLocation(value)}>
-          <SelectTrigger className="lg:text-gray-400 lg:text-xl">
+          <SelectTrigger className="lg:text-gray-400 text-gray-400  lg:text-xl">
             <SelectValue placeholder="Filter by Location" />
           </SelectTrigger>
           <SelectContent>
@@ -110,7 +110,7 @@ const JobListing = () => {
           value={company_id}
           onValueChange={(value) => setCompany_id(value)}
         >
-          <SelectTrigger className="lg:text-gray-400 lg:text-xl">
+          <SelectTrigger className="lg:text-gray-400 text-gray-400 lg:text-xl">
             <SelectValue placeholder="Filter by Company" />
           </SelectTrigger>
           <SelectContent>
@@ -151,7 +151,7 @@ const JobListing = () => {
               );
             })
           ) : (
-            <div>No Jobs Found 😢</div>
+            <div className="xl:text-3xl xl:text-center">No Jobs Found 😢</div>
           )}
         </div>
       )}

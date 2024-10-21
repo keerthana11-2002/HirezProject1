@@ -36,7 +36,7 @@ const Header = () => {
           <Link to="/">
             <img
               src="/assets/logo2.png"
-              className="h-16 md:h-32 md:-ml-20 sm:h-24  "
+              className="h-16 md:h-32 md:-ml-20 sm:h-24"
               alt="Hirez Logo"
             />
           </Link>
@@ -54,7 +54,7 @@ const Header = () => {
             <SignedIn>
               {user?.unsafeMetadata?.role === "recruiter" && (
                 <Link to="/post-job">
-                  <Button variant="destructive" className=" rounded-full ">
+                  <Button variant="destructive" className="ml-5 rounded-full ">
                     <PenBox size={15} className="mr-2" />
                     Post a Job
                   </Button>
@@ -63,7 +63,7 @@ const Header = () => {
               <UserButton
                 appearance={{
                   elements: {
-                    avatarBox: " mr-5 w-10 h-10",
+                    avatarBox: "mr-2 w-10 h-10",
                   },
                 }}
               >

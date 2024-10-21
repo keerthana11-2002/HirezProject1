@@ -85,25 +85,25 @@ const PostJob = () => {
   }
 
   return (
-    <div className="ml-4 lg:ml-80 px-4">
-      <h1 className="gradient-title font-extrabold text-4xl sm:text-5xl md:text-6xl text-center pb-8">
+    <div className="ml-4 xl:p-10 xl:-mt-16 p-4">
+      <h1 className="gradient-title font-extrabold text-3xl sm:text-5xl md:text-6xl text-center pb-8 tracking-tighter">
         Post a Job
       </h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-4 pb-0"
+        className="flex flex-col gap-4  "
       >
         <Input
           placeholder="Job Title"
           {...register("title")}
-          className="text-xl"
+          className="text-xl text-md sm:text-xl md:text-xl xl:text-xl"
         />
         {errors.title && (
           <p className="text-red-500 text-sm">{errors.title.message}</p>
         )}
 
         <Textarea
-          className="text-xl"
+          className="text-md sm:text-xl md:text-xl xl:text-xl "
           placeholder="Job Description"
           {...register("description")}
         />
@@ -111,13 +111,13 @@ const PostJob = () => {
           <p className="text-red-500 text-sm">{errors.description.message}</p>
         )}
 
-        <div className="flex flex-col gap-4 lg:flex-row lg:gap-8">
+        <div className="flex flex-col gap-4 lg:flex-row lg:gap-8 ">
           <Controller
             name="location"
             control={control}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger className="text-xl w-full lg:w-auto">
+                <SelectTrigger className="text-xl w-full lg:w-auto text-gray-400 text-md sm:text-xl md:text-xl xl:text-xl ">
                   <SelectValue placeholder="Job Location" />
                 </SelectTrigger>
                 <SelectContent>
@@ -137,7 +137,7 @@ const PostJob = () => {
             control={control}
             render={({ field }) => (
               <Select value={field.value} onValueChange={field.onChange}>
-                <SelectTrigger className="text-xl w-full lg:w-auto">
+                <SelectTrigger className="text-xl w-full lg:w-auto text-gray-400 text-md sm:text-xl md:text-xl xl:text-xl">
                   <SelectValue placeholder="Company">
                     {field.value
                       ? companies?.find((com) => com.id === Number(field.value))
