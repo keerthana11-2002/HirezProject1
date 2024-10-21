@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://keerthana11-2002.github.io/Hirez-Project/",
+  "homepage": "https://keerthana11-2002.github.io/Hirez-1/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
