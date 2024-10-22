@@ -71,7 +71,7 @@ const JobListing = () => {
       </h1>
       <form
         onSubmit={handleSearch}
-        className="h-14  p-2 flex flex-row w-full gap-2 items-center  "
+        className="h-14  p-3 flex flex-row w-full gap-2 items-center  "
       >
         <Input
           type="text"

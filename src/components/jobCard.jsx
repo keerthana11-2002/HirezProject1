@@ -45,6 +45,7 @@ const JobCard = ({
   }, [savedJob]);
 
   return (
+    <div className="p-6">
     <Card className="items-center  shadow-lg rounded-lg p-4 mb-10 lg:ml-40 w-full  md:transition-transform md:hover:scale-105  transition-transform hover:scale-105 md:gap-20 xl:ml-0 ">
       <CardHeader className="grid grid-cols-2 ">
         <CardTitle className="text-2xl md:font-bold font-bold">
@@ -66,9 +67,9 @@ const JobCard = ({
       <CardDescription className="md:text-lg text-gray-400  ">
         {job.description.substring(0, job.description.indexOf("."))}...
       </CardDescription>
-      <CardFooter className="flex justify-between items-center mt-6 md:text-2xl">
+      <CardFooter className="flex justify-between items-center mt-6 md:text-2xl gap-5">
         <Link to={`/job/${job.id}`} className="w-full">
-          <Button variant="secondary" className="w-full lg:text-xl">
+          <Button variant="secondary" className="w-full lg:text-xl ">
             More Details
           </Button>
         </Link>
@@ -88,6 +89,7 @@ const JobCard = ({
         )}
       </CardFooter>
     </Card>
+    </div>
   );
 };
 
