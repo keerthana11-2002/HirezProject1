@@ -65,7 +65,7 @@ const JobListing = () => {
   }
 
   return (
-    <div className="xl:p-20">
+    <div className="xl:p-20 mt-14">
       <h1 className=" gradient-title font-extrabold text-3xl sm:text-6xl text-center pb-4  lg:mb-4 xl:-mt-20">
         Latest Jobs
       </h1>

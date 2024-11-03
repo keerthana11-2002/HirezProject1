@@ -56,7 +56,7 @@ alreadySaved:saved,
   }, [savedJob]);
 
   return (
-    <div className="p-4">
+    <div className="p-4 -mt-16">
       <Card className="flex flex-col ">
         {loadingDeleteJob && (
           <BarLoader className="mt-4" width={"100%"} color="blue" />
