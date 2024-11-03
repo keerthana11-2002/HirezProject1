@@ -16,13 +16,14 @@ import { BarLoader } from "react-spinners";
 
 const JobCard = ({
   job,
-  savedInit = false,
-  onJobAction = () => {},
   isMyJob = false,
+  savedInit = false,
+  onJobSaved = () => {},
+  
 }) => {
-  const [saved, setSaved] = useState(savedInit);
+   const [saved, setSaved] = useState(savedInit);
 
-  const { user } = useUser();
+  
 
   const { loading: loadingDeleteJob, fn: fnDeleteJob } = useFetch(deleteJob, {
     job_id: job.id,
@@ -32,19 +33,22 @@ const JobCard = ({
     loading: loadingSavedJob,
     data: savedJob,
     fn: fnSavedJob,
-  } = useFetch(saveJob);
+  } = useFetch(saveJob,{
+alreadySaved:saved,
+  });
+  const { user } = useUser();
 
   const handleSaveJob = async () => {
     await fnSavedJob({
       user_id: user.id,
       job_id: job.id,
     });
-    onJobAction();
+    onJobSaved();
   };
 
   const handleDeleteJob = async () => {
     await fnDeleteJob();
-    onJobAction();
+    onJobSaved();
   };
 
   useEffect(() => {
@@ -94,9 +98,9 @@ const JobCard = ({
               disabled={loadingSavedJob}
             >
               {saved ? (
-                <Heart size={20} fill="red" stroke="red" />
+                <Heart size={24} fill="red" stroke="red" />
               ) : (
-                <Heart size={20} />
+                <Heart size={24} />
               )}
             </Button>
           )}
