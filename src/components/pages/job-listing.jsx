@@ -65,7 +65,7 @@ const JobListing = () => {
   }
 
   return (
-    <div className="xl:p-20" >
+    <div className="xl:p-20">
       <h1 className=" gradient-title font-extrabold text-3xl sm:text-6xl text-center pb-4  lg:mb-4 xl:-mt-20">
         Latest Jobs
       </h1>
@@ -77,11 +77,11 @@ const JobListing = () => {
           type="text"
           placeholder="Search Jobs by Title.."
           name="search-query"
-          className="h-full flex-1  px-4 text-md lg:text-xl  "
+          className="h-full flex-1  px-4 xl:py-5 text-md lg:text-xl   "
         />
         <Button
           type="submit"
-          className="h-full sm:w-28  lg:text-2xl"
+          className="h-full sm:w-28 xl:p-5 p-4 lg:text-2xl"
           variant="blue"
         >
           Search
@@ -139,7 +139,7 @@ const JobListing = () => {
       )}
 
       {loadingJobs === false && (
-        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10">
+        <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3  lg:gap-10">
           {jobs?.length ? (
             jobs.map((job) => {
               return (
@@ -151,7 +151,9 @@ const JobListing = () => {
               );
             })
           ) : (
-            <div className="xl:text-3xl xl:text-center ml-10">No Jobs Found 😢</div>
+            <div className="xl:text-3xl xl:text-center ml-10">
+              No Jobs Found 😢
+            </div>
           )}
         </div>
       )}

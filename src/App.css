@@ -28,24 +28,4 @@
   padding-left: 25px;
   color: white;
 }
-/* .fixed-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px; 
-  z-index: 1000;
-}
-
-@media (max-width: 768px) {
-  .fixed-container {
-    height: 60px; 
-  }
-}
-
-@media (max-width: 375px) {
-  .fixed-container {
-    height: 20px;
-      
-  }
-} */
+ 

@@ -115,7 +115,7 @@ export async function getSavedJobs(token) {
   return data;
 }
 
-export async function getMyJobs(token) {
+export async function getMyJobs(token, { recruiter_id }) {
   const supabase = await supabaseClient(token);
 
   const { data, error } = await supabase
@@ -125,6 +125,21 @@ export async function getMyJobs(token) {
 
   if (error) {
     console.error("Error Fetching  Job:", error);
+    return null;
+  }
+  return data;
+}
+export async function deleteJob(token, { job_id }) {
+  const supabase = await supabaseClient(token);
+
+  const { data, error } = await supabase
+    .from("jobs")
+    .delete()
+    .eq("id", job_id)
+    .select();
+
+  if (error) {
+    console.error("Error Deleting Job:", error);
     return null;
   }
   return data;

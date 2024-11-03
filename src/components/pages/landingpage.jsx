@@ -14,11 +14,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
- 
 
 const LandingPage = () => {
   return (
-    <main className=" p-4 flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-16 py-8 sm:py-12 lg:py-20 ">
+    <main className=" p-4 flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-16 py-8 sm:py-12 lg:py-20 md:p-10 ">
       <section className="text-center mx-auto xl:-mt-20">
         <h1 className="flex flex-col items-center justify-center gradient-title font-bold text-4xl sm:text-4xl md:text-6xl lg:text-6xl xl:text-7xl tracking-tighter py-4">
           Unlock your potential,
@@ -29,7 +28,7 @@ const LandingPage = () => {
             with
             <img
               src="/assets/logo2.png"
-              className="h-12  sm:h-14 md:h-20 lg:h-28 xl:h-24"
+              className="h-12 -ml-2  sm:h-14 md:h-20 lg:h-28 xl:h-24 xl:-ml-5"
               alt="Hirez Logo"
             />
           </span>
@@ -63,10 +62,7 @@ const LandingPage = () => {
       <Carousel>
         <CarouselContent className="flex gap-2 sm:gap-4 md:gap-8 lg:gap-12 items-center z-0 ">
           {companies.map(({ name, id, path }) => (
-            <CarouselItem
-              key={id}
-              className="hidden "
-            >
+            <CarouselItem key={id} className="hidden ">
               <img
                 src={path}
                 alt={name}

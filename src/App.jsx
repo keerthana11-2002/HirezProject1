@@ -9,6 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import ProtectedRoute from "./components/ProtectedRoute";
 import LandingPage from "./components/pages/landingpage";
 import AppLayout from "@/components/layouts/Applayout";
+import MyJobs from "@/components/pages/myjobs";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,14 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <SavedJob />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: "/myjobs",
+        element: (
+          <ProtectedRoute>
+            <MyJobs />
           </ProtectedRoute>
         ),
       },

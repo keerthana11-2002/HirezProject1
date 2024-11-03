@@ -39,8 +39,8 @@ export async function updateApplications(token, { job_id }, status) {
 
   const { data, error } = await supabase
     .from("applications")
-    .eq("job_id", job_id)
     .update({ status })
+    .eq("job_id", job_id)
     .select();
 
   if (error || data.length === 0) {

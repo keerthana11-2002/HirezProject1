@@ -49,7 +49,7 @@ const JobPage = () => {
   }
 
   return (
-    <div className="flex flex-col gap-8 mt-5 xl:-mt-20 xl:p-20 p-5">
+    <div className="flex flex-col gap-8  xl:-mt-10 xl:p-20 p-5 ">
       <div className="flex flex-col-reverse gap-6 md:flex-row justify-between items-center">
         <h1 className="gradient-title font-extrabold pb-3 text-4xl sm:text-6xl">
           {job?.title}
@@ -120,7 +120,7 @@ const JobPage = () => {
       {loadingHiringStatus && <BarLoader width={"100%"} color="blue" />}
       {job?.applications?.length > 0 && job?.recruiter_id === user?.id && (
         <div className="flex flex-col gap-2">
-          <h2 className="font-bold mb-4 text-xl ml-1">Applications</h2>
+          <h2 className="font-bold mb-4 text-2xl ml-1">Applications</h2>
           {job?.applications.map((application) => {
             return (
               <ApplicationCard key={application.id} application={application} />
