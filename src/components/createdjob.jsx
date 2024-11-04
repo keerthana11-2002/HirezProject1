@@ -25,7 +25,7 @@ const CreatedJobs = () => {
       {loadingCreatedJobs ? (
         <BarLoader className="mt-4" width={"100%"} color="blue" />
       ) : (
-        <div className="mt-7 grid md:grid-cols-2 lg:grid-cols-3 gap-2 ">
+        <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-2  xl:p-10 xl:-mt-10">
           {createdJobs?.length ? (
             createdJobs.map((job) => {
               return (

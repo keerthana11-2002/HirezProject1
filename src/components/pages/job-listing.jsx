@@ -65,7 +65,7 @@ const JobListing = () => {
   }
 
   return (
-    <div className="xl:p-20 mt-14">
+    <div className="xl:p-14 mt-8">
       <h1 className=" gradient-title font-extrabold text-3xl sm:text-6xl text-center pb-4  lg:mb-4 xl:-mt-20">
         Latest Jobs
       </h1>
@@ -139,7 +139,7 @@ const JobListing = () => {
       )}
 
       {loadingJobs === false && (
-        <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3  lg:gap-10">
+        <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3  lg:gap-6">
           {jobs?.length ? (
             jobs.map((job) => {
               return (

@@ -36,7 +36,7 @@ const ApplicationCard = ({ application, isCandidate = false }) => {
     fnHiringStatus(status);
   };
   return (
-    <div className="xl:p-10">
+    <div className="xl:p-2">
       <Card>
         {loadingHiringStatus && (
           <BarLoader className="mb-20" width={"100%"} color="blue" />
