@@ -10,7 +10,7 @@ const AppLayout = () => {
         <Outlet />
       </main>
       <div className="p-10 text-center bg-gray-800 mt-10  text-xl sm:text-xl md:text-2xl xl:text-4xl">
-        Hirez crafted with passion to find your dream job👍
+        Hirez crafted with passion to find your dream jobs👍
       </div>
     </div>
   );
